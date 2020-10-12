@@ -1,33 +1,100 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Form, FormGroup, Input, Button, Label } from "reactstrap";
+import React, { Component } from "react";
+import axios from 'axios';
+import FormData from 'form-data'
 
-class AddCloth extends AddCloth {
+
+class AddCloth extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: "",
+      price: "",
+      type: "",
+      image_base64: "",
       image: "" // 画像を表示する用
     };
   }
 
+  componentDidMount(){
+    /*
+    const passsword = window.prompt("管理者パスワードを入力してください", "");
+    if(passsword !== "password") {
+      // TODO: ここはあとで修正
+      this.props.history.push('/');
+    }
+    */
+  }
 
   handleToSubmitCloth = () => {
-    this.props.history.push('/InputPost');
+    //const params = new URLSearchParams();
+    const formData = new FormData();
+    formData.append('name', this.state.name);
+    formData.append('price', this.state.price);
+    formData.append('type', this.state.type);
+    const b64 = this.ImageToBase64(document.getElementById('MyImg'), "image/jpeg");
+    formData.append('image', b64);
+
+    axios.post('http://localhost:8000/api/v1/cloth', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      }
+    })
+    .then((response) => {
+        // TODO
+        console.log("投稿完了")
+    })
+    .catch(() => {
+        console.log("post fail");
+    });
+  }
+
+  onChange = (e) => {
+    this.setState({
+        [e.target.name]: e.target.value,
+    });
+  }
+
+  ImageToBase64(img, mime_type) {
+    // New Canvas
+    var canvas = document.createElement('canvas');
+    canvas.width  = img.width;
+    canvas.height = img.height;
+    // Draw Image
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    // To Base64
+    return canvas.toDataURL(mime_type);
   }
 
   handleChangeFile = (e) => {
+    this.setState({
+      image_base64: e.target.files[0]
+    })
     const files = e.target.files;
     const createObjectURL = (window.URL || window.webkitURL).createObjectURL || window.createObjectURL;
     const image_url = createObjectURL(files[0]);
-    this.setState({image: image_url});    
+    this.setState({image: image_url});
   }
   
   render() {
     return (
       <div>
-        <input type="file" ref="file" onChange={this.handleChangeFile} />
-        <img src={this.state.image} />
-        <button onClick={this.clickPostBtn} type="button">投稿する</button>
+        <div>
+          <span className="label">服の名前</span>
+          <input type="text" name="name" onChange={this.onChange} />
+        </div>
+        <div>
+          <span className="label">価格</span>
+          <input type="text" name="price" onChange={this.onChange} />
+        </div>
+        <div>
+          <span className="label">タイプ(a:トップ、b:パンツ)</span>
+          <input type="text" name="type" onChange={this.onChange} />
+        </div>
+
+        <input type="file" name="image" onChange={this.handleChangeFile} />
+        <img src={this.state.image} id="MyImg"/>
+        <button onClick={this.handleToSubmitCloth} type="button">投稿する</button>
       </div>
     )
   }

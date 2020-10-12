@@ -10,27 +10,47 @@ import {
   useParams,
 } from "react-router-dom";
 
+import Login from "./Login/Login";
+
 function App() {
   return (
     <Router>
       <div>
-        <div>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/main">Main</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/main">
+            <Main />
+          </Route>
+        </Switch>
       </div>
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
     </Router>
   );
 }
 
 function Home() {
   return <h2>Home</h2>;
+}
+
+function Main() {
+  return <h2>Main</h2>;
 }
 
 export default App;

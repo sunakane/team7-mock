@@ -5,7 +5,7 @@ import { Form, FormGroup, Input, Button, Label } from "reactstrap";
 const Login = () => {
   return (
     <Form>
-      <FormGroup>
+      <FormGroup row>
         <Label for="loginEmail">メールアドレス</Label>
         <Input
           type="email"
@@ -14,7 +14,7 @@ const Login = () => {
           placeholder="email@example.com"
         />
       </FormGroup>
-      <FormGroup>
+      <FormGroup row>
         <Label for="loginPassword">パスワード</Label>
         <Input
           type="password"

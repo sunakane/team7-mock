@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 
 import Login from "./Login/Login";
+import AddCloth from "./AddCloth/AddCloth";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/main">
             <Main />
+          </Route>
+          <Route path="/add_cloth">
+            <AddCloth />
           </Route>
         </Switch>
       </div>

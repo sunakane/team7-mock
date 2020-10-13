@@ -38,8 +38,7 @@ class AddCloth extends Component {
       }
     })
     .then((response) => {
-        // TODO
-        console.log("投稿完了")
+        console.log(response.data);
     })
     .catch(() => {
         console.log("post fail");

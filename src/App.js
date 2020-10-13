@@ -12,6 +12,7 @@ import {
 
 import Login from "./Login/Login";
 import AddCloth from "./AddCloth/AddCloth";
+import BuyCloth from "./Cloth/BuyCloth";
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path="/add_cloth">
             <AddCloth />
+          </Route>
+          <Route path="/buy_cloth">
+            <BuyCloth />
           </Route>
         </Switch>
       </div>

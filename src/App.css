@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*  画像投稿ページ  */
+#show-img {
+  width: 300px;
+}
+
+#MyImg {
+  display: none;
+  visibility: hidden;
+}

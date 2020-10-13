@@ -79,22 +79,24 @@ class AddCloth extends Component {
   render() {
     return (
       <div>
-        <div>
-          <span className="label">服の名前</span>
+        <div className="form-group">
+          <label id="exampleInputEmail1">服の名前</label><br/>
           <input type="text" name="name" onChange={this.onChange} />
         </div>
-        <div>
-          <span className="label">価格</span>
+        <div className="form-group">
+          <label id="exampleInputEmail1">価格</label><br/>
           <input type="text" name="price" onChange={this.onChange} />
         </div>
-        <div>
-          <span className="label">タイプ(a:トップ、b:パンツ)</span>
+        <div className="form-group">
+          <label id="exampleInputEmail1">タイプ(a:トップ、b:パンツ)</label><br/>
           <input type="text" name="type" onChange={this.onChange} />
         </div>
 
         <input type="file" name="image" onChange={this.handleChangeFile} />
-        <img src={this.state.image} id="MyImg"/>
-        <button onClick={this.handleToSubmitCloth} type="button">投稿する</button>
+        <img src={this.state.image} id="MyImg" />
+        <img src={this.state.image} id="show-img" />
+
+        <button onClick={this.handleToSubmitCloth} className="btn btn-primary">投稿する</button>
       </div>
     )
   }

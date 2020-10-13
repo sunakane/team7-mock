@@ -16,13 +16,11 @@ class AddCloth extends Component {
   }
 
   componentDidMount(){
-    /*
     const passsword = window.prompt("管理者パスワードを入力してください", "");
     if(passsword !== "password") {
       // TODO: ここはあとで修正
       this.props.history.push('/');
     }
-    */
   }
 
   handleToSubmitCloth = () => {

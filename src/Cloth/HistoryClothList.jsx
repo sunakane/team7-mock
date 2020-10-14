@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Cloth from './Cloth';
+import HisotryCloth from './HistoryCloth';
 
-// DBから取得した服のリスト(購入画面で使用)
-class ClothList extends Component {
+// DBから取得した服のリスト(購入履歴画面で使用)
+class HisotryClothList extends Component {
   render() {
     const clothes = [];
     for(let i = 0; i < this.props.clothes.length; i++){
       if(this.props.clothes[i].ImageUrl === "no_url") {
         clothes.push(
-          <Cloth
+          <HisotryCloth
             key={i}
             index={i}
             id={this.props.clothes[i].ID}
@@ -19,7 +19,7 @@ class ClothList extends Component {
         );
       } else {
         clothes.push(
-          <Cloth
+          <HisotryCloth
             key={i}
             index={i}
             id={this.props.clothes[i].ID}
@@ -39,4 +39,4 @@ class ClothList extends Component {
   }
 }
 
-export default ClothList;
+export default HisotryClothList;

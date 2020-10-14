@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import ClothList from './ClothList';
+import HistoryClothList from './HistoryClothList';
 import axios from 'axios';
 
-// 服購入画面
-class BuyCloth extends Component {
+// 服の購入履歴画面 (HistoryClothView → HistoryClothList → HistoryCloth)
+class HistoryCloth extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,8 @@ class BuyCloth extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:8000/api/v1/get_cloth', {
+    // ユーザーが購入した服一覧を取得
+    axios.get('http://localhost:8000/api/v1/history_cloth', {
     })
     .then((response) => {
         console.log(response.data);
@@ -29,12 +30,11 @@ class BuyCloth extends Component {
   handleToSubmitCloth = () => {
   }
 
-  
   render() {
     return (
       <div>
         <div id="buy_animation"></div>
-        <ClothList
+        <HistoryClothList
           clothes={this.state.clothes}
           id={this.state.id}
         />
@@ -43,4 +43,4 @@ class BuyCloth extends Component {
   }
 }
 
-export default BuyCloth;
+export default HistoryCloth;

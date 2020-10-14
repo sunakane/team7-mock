@@ -16,7 +16,11 @@ class Cloth extends Component {
   
   render() {
     return (
-      <div>
+      <div id="cloth-box">
+        <div id="cloth-name">{this.props.name}</div>
+        <div id="cloth-price">{this.props.price}</div>
+        <img src={this.props.image} id="cloth-image" />
+
       </div>
     )
   }

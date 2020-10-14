@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import ClothList from './ClothList';
 import axios from 'axios';
 
 class BuyCloth extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      clothes: []
     };
   }
 
@@ -13,6 +15,10 @@ class BuyCloth extends Component {
     })
     .then((response) => {
         console.log(response.data);
+        this.setState({
+          clothes: response.data["clothes"]
+        })
+        console.log(this.state.clothes);
     })
     .catch(() => {
         console.log("post fail");
@@ -26,6 +32,10 @@ class BuyCloth extends Component {
   render() {
     return (
       <div>
+        <ClothList
+          clothes={this.state.clothes}
+          id={this.state.id}
+        />
       </div>
     )
   }

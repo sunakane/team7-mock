@@ -47,3 +47,8 @@
   display: none;
   visibility: hidden;
 }
+
+/* 服購入ページ */
+#cloth-image {
+  width: 100px;
+}

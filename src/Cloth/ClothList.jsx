@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cloth from './Cloth';
 
+// DBから取得した服のリスト(購入画面、購入履歴で使用)
 class ClothList extends Component {
   render() {
     const clothes = [];
@@ -31,9 +32,9 @@ class ClothList extends Component {
     }
 
     return (
-      <ul>
+      <div>
         {clothes}
-      </ul>
+      </div>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// 服単体
 class Cloth extends Component {
   constructor(props) {
     super(props);

@@ -32,6 +32,7 @@ class BuyCloth extends Component {
   render() {
     return (
       <div>
+        <div id="buy_animation"></div>
         <ClothList
           clothes={this.state.clothes}
           id={this.state.id}

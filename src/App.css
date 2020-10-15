@@ -79,3 +79,13 @@
   font-weight: bold;
   color: darkorchid;
 }
+
+/* 購入履歴ページ */
+#buy-cloth-box {
+  padding: 0.5em 1em;
+  margin: 10px 10px 0 5px;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 3px #e06d0f;
+  border-radius: 10px;
+}

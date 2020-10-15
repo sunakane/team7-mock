@@ -25,10 +25,6 @@ class BuyClothView extends Component {
         console.log("post fail");
     });
   }
-
-  handleToSubmitCloth = () => {
-  }
-
   
   render() {
     return (

@@ -10,7 +10,7 @@ class HistoryCloth extends Component {
   
   render() {
     return (
-      <div id="cloth-box">
+      <div id="buy-cloth-box">
         <div id="cloth-detail-box">
           <div id="cloth-name">{this.props.name}</div>
           <div id="cloth-price">{this.props.price}円</div>

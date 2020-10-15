@@ -13,8 +13,7 @@ class HistoryCloth extends Component {
 
   componentDidMount(){
     // ユーザーが購入した服一覧を取得
-    axios.get('http://localhost:8000/api/v1/history_cloth', {
-    })
+    axios.get('http://localhost:8000/api/v1/my_cloth', {withCredentials: true})
     .then((response) => {
         console.log(response.data);
         this.setState({
@@ -33,7 +32,6 @@ class HistoryCloth extends Component {
   render() {
     return (
       <div>
-        <div id="buy_animation"></div>
         <HistoryClothList
           clothes={this.state.clothes}
           id={this.state.id}

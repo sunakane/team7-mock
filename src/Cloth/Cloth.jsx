@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
-// 服単体
+// 服単体コンポーネント
 class Cloth extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,16 @@ class Cloth extends Component {
     const button = document.getElementById("buy-btn");
     button.disabled = true;
     button.innerHTML = "購入済み";
+
+    axios.post('http://localhost:8000/api/v1/buy', {
+      "clothID": this.props.id
+    }, {withCredentials: true})
+    .then((response) => {
+        console.log(response.data);
+    })
+    .catch(() => {
+        console.log("post fail");
+    });
   }
 
   

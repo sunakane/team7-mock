@@ -11,6 +11,9 @@ import {
 } from "react-router-dom";
 
 import Login from "./Login/Login";
+import AddCloth from "./AddCloth/AddCloth";
+import BuyClothView from "./Cloth/BuyClothView";
+import HistorClothView from "./Cloth/HistoryClothView"
 
 function App() {
   return (
@@ -27,6 +30,15 @@ function App() {
             <li>
               <Link to="/main">Main</Link>
             </li>
+            <li>
+              <Link to="/add_cloth">服の追加</Link>
+            </li>
+            <li>
+              <Link to="/buy_cloth">服の購入</Link>
+            </li>
+            <li>
+              <Link to="/history_cloth">購入履歴</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -38,6 +50,15 @@ function App() {
           </Route>
           <Route path="/main">
             <Main />
+          </Route>
+          <Route path="/add_cloth">
+            <AddCloth />
+          </Route>
+          <Route path="/buy_cloth">
+            <BuyClothView />
+          </Route>
+          <Route path="/history_cloth">
+            <HistorClothView />
           </Route>
         </Switch>
       </div>

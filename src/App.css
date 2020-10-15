@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*  画像投稿ページ  */
+#show-img {
+  width: 300px;
+}
+
+#MyImg {
+  display: none;
+  visibility: hidden;
+}
+
+/* 服購入ページ */
+#cloth-box {
+  padding: 0.5em 1em;
+  margin: 10px 10px 0 5px;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+}
+#cloth-image {
+  width: 100px;
+}
+#cloth-detail-box {
+  float: right;
+  margin-right: 30px;
+}
+#cloth-name {
+  font-size: 20px;
+}
+#cloth-price {
+  font-size: 18px;
+}
+#buy-btn {
+  margin-top: 7px;
+}
+#buy_animation {
+  margin-left: 21px;
+  font-size: 25px;
+  font-weight: bold;
+  color: darkorchid;
+}
+
+/* 購入履歴ページ */
+#buy-cloth-box {
+  padding: 0.5em 1em;
+  margin: 10px 10px 0 5px;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 3px #e06d0f;
+  border-radius: 10px;
+}

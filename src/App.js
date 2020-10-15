@@ -37,7 +37,7 @@ function App() {
               <Link to="/buy_cloth">服の購入</Link>
             </li>
             <li>
-              <Link to="history_cloth">購入履歴</Link>
+              <Link to="/history_cloth">購入履歴</Link>
             </li>
           </ul>
         </nav>

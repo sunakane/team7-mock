@@ -32,6 +32,7 @@ class HistoryCloth extends Component {
   render() {
     return (
       <div>
+        <h2>購入履歴</h2>
         <HistoryClothList
           clothes={this.state.clothes}
           id={this.state.id}

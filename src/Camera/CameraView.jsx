@@ -19,8 +19,8 @@ class CameraView extends Component {
     const constraints = {
       audio: false,
       video: {
-        width: 330,
-        height: 500,
+        width: 335,
+        height: 515,
         facingMode: "user"   // フロントカメラを利用する
       }  
     }

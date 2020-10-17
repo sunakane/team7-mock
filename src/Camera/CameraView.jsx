@@ -43,6 +43,7 @@ class CameraView extends Component {
     const btn = document.querySelector("#shutter");
     const canvas = document.querySelector("#picture");  
     const ctx = canvas.getContext("2d");
+    const audio = new Audio("se/camera-se.mp3")
 
     canvas.style.display = "block";
 
@@ -51,6 +52,8 @@ class CameraView extends Component {
     setTimeout( () => {
       video.play();
     }, 500);
+
+    audio.play()
 
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height); 

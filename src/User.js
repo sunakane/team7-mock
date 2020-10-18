@@ -8,7 +8,8 @@ class User {
 
   getLocalStorage = (key) => {
     const ret = localStorage.getItem(key);
-    return ret ? ret : null;
+    if (ret) return ret;
+    else return null;
   };
 
   login = async (email, password) => {

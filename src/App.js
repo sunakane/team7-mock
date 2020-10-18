@@ -13,7 +13,8 @@ import {
 import Login from "./Login/Login";
 import AddCloth from "./AddCloth/AddCloth";
 import BuyClothView from "./Cloth/BuyClothView";
-import HistorClothView from "./Cloth/HistoryClothView"
+import HistorClothView from "./Cloth/HistoryClothView";
+import Auth from "./Login/Auth";
 
 function App() {
   return (
@@ -45,22 +46,27 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
-          <Route path="/main">
-            <Main />
-          </Route>
-          <Route path="/add_cloth">
-            <AddCloth />
-          </Route>
-          <Route path="/buy_cloth">
-            <BuyClothView />
-          </Route>
-          <Route path="/history_cloth">
-            <HistorClothView />
-          </Route>
         </Switch>
+        {/* Auth以下はログインしているときだけ表示されるようにした */}
+        <Auth>
+          <Switch>
+            <Route path="/main">
+              <Main />
+            </Route>
+            <Route path="/add_cloth">
+              <AddCloth />
+            </Route>
+            <Route path="/buy_cloth">
+              <BuyClothView />
+            </Route>
+            <Route path="/history_cloth">
+              <HistorClothView />
+            </Route>
+          </Switch>
+        </Auth>
       </div>
     </Router>
   );

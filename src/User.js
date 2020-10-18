@@ -1,13 +1,21 @@
+import { Cookies } from "react-cookie";
+
 class User {
+  constructor() {
+    this.cookies = new Cookies();
+  }
+
   isLoggedIn = () => this.get("isLoggedIn") === "true";
 
   // webストレージにkey: valueで登録
-  set = (key, value) => localStorage.setItem(key, value);
+  // set = (key, value) => localStorage.setItem(key, value);
+  set = (key, value) => this.cookies.set(key, value);
 
-  get = (key) => this.getLocalStorage(key);
+  // get = (key) => this.getLocalStorage(key);
+  get = (key) => this.getCookies(key);
 
-  getLocalStorage = (key) => {
-    const ret = localStorage.getItem(key);
+  getCookies = (key) => {
+    const ret = this.cookies.get(key);
     if (ret) return ret;
     else return null;
   };

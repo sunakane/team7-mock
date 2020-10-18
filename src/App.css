@@ -89,3 +89,41 @@
   border: solid 3px #e06d0f;
   border-radius: 10px;
 }
+
+
+/* カメラでコーディネートAI判定ページ */
+#camera {
+  margin: 10px 5px 0 20px;
+  border: solid 8px #6091d3;
+  border-radius: 10px;
+}
+#picture {
+  margin: 10px 5px 0 20px;
+  border: solid 8px #6091d3;
+  border-radius: 10px;
+}
+#btn-form{
+  text-align: center;
+}
+#shutter {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  background: #668ad8;
+  color: #FFF;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#kekka {
+  font-size: 25px;
+  font-weight: bold;
+}
+#score {
+  text-align: center;
+  font-size: 45px;
+  color: red;
+  font-weight: bold;
+}
+#recommend-cord {
+  font-size: 18px;
+}

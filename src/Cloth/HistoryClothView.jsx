@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import HistoryClothList from './HistoryClothList';
 import axios from 'axios';
+import { withRouter } from "react-router-dom";
 
 // 服の購入履歴画面 (HistoryClothView → HistoryClothList → HistoryCloth)
 class HistoryCloth extends Component {
@@ -42,4 +43,4 @@ class HistoryCloth extends Component {
   }
 }
 
-export default HistoryCloth;
+export default withRouter(HistoryCloth);

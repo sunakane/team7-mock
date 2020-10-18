@@ -13,8 +13,9 @@ import {
 import Login from "./Login/Login";
 import AddCloth from "./AddCloth/AddCloth";
 import BuyClothView from "./Cloth/BuyClothView";
-import HistorClothView from "./Cloth/HistoryClothView";
 import Auth from "./Login/Auth";
+import HistorClothView from "./Cloth/HistoryClothView"
+import CameraView from "./Camera/CameraView";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
             <li>
               <Link to="/history_cloth">購入履歴</Link>
             </li>
+            <li>
+              <Link to="/camera">AIコーデ判定</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -64,6 +68,9 @@ function App() {
             </Route>
             <Route path="/history_cloth">
               <HistorClothView />
+            </Route>
+            <Route path="/camera">
+              <CameraView />
             </Route>
           </Switch>
         </Auth>

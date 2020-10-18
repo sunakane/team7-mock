@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 // カメラでコーディネートを写真で撮って判定する
 class CameraView extends Component {
@@ -95,4 +96,4 @@ class CameraView extends Component {
   }
 }
 
-export default CameraView;
+export default withRouter(CameraView);

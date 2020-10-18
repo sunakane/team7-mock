@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import FormData from 'form-data'
+import { withRouter } from "react-router-dom";
+
 
 // 服追加画面
 class AddCloth extends Component {
@@ -99,4 +101,4 @@ class AddCloth extends Component {
   }
 }
 
-export default AddCloth;
+export default withRouter(AddCloth);

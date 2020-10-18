@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ClothList from './ClothList';
 import axios from 'axios';
+import { withRouter } from "react-router-dom";
 
 // 服購入画面 (BuyClothView → ClothList → Cloth)
 class BuyClothView extends Component {
@@ -40,4 +41,4 @@ class BuyClothView extends Component {
   }
 }
 
-export default BuyClothView;
+export default withRouter(BuyClothView);

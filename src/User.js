@@ -1,5 +1,7 @@
 import { Cookies } from "react-cookie";
+import axios from "axios";
 
+const endpoint = process.env.REACT_APP_API_ENDPOINT;
 class User {
   constructor() {
     this.cookies = new Cookies();
@@ -20,10 +22,25 @@ class User {
     else return null;
   };
 
-  login = async (email, password) => {
+  login = async (submit_id, password) => {
     // ログイン処理
-    this.set("isLoggedIn", true);
-    return true;
+    try {
+      await axios.post(
+        `${endpoint}/login`,
+        {
+          submit_id: submit_id,
+          password: password,
+        },
+        {
+          // withCredentials: true,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      this.set("isLoggedIn", true);
+      return true;
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   logout = async () => {

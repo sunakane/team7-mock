@@ -12,17 +12,17 @@ import { withRouter } from "react-router-dom";
 import User from "../User.js";
 
 const Login = (props) => {
-  const [email, setEmail] = useState("");
+  const [userId, setUserId] = useState("");
   const [password, setPassWord] = useState("");
 
   const [errMsg, setErrMsg] = useState("");
 
   async function onLoginClicked() {
     try {
-      await User.login(email, password);
+      await User.login(userId, password);
       props.history.push({ pathname: "main" });
     } catch (e) {
-      setErrMsg("メールアドレスかパスワードが違います");
+      setErrMsg("IDとパスワードが一致しません");
     }
   }
 
@@ -31,16 +31,16 @@ const Login = (props) => {
       <Form>
         {errMsg && <Alert color="danger">{errMsg}</Alert>}
         <FormGroup row>
-          <Label for="loginEmail">メールアドレス</Label>
+          <Label for="userId">ID</Label>
           <Input
-            type="email"
-            name="email"
-            id="loginEmail"
-            placeholder="email@example.com"
+            type="text"
+            name="userId"
+            id="userId"
+            placeholder="ID"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setUserId(e.target.value);
             }}
-            value={email}
+            value={userId}
           />
         </FormGroup>
         <FormGroup row>

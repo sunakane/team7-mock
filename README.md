@@ -3,5 +3,6 @@
 ```
 $ git clone https://github.com/sunakane/team7-mock.git
 $ cd team7-mock
+$ cp .env.example .env
 $ yarn start
 ```

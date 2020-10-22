@@ -16,6 +16,7 @@ import BuyClothView from "./Cloth/BuyClothView";
 import Auth from "./Login/Auth";
 import HistorClothView from "./Cloth/HistoryClothView"
 import CameraView from "./Camera/CameraView";
+import RakutenAPI from "./RakutenAPI/RakutenAPI";
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
             <li>
               <Link to="/camera">AIコーデ判定</Link>
             </li>
+            <li>
+              <Link to="/rakuten">AIコーデ判定</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -71,6 +75,9 @@ function App() {
             </Route>
             <Route path="/camera">
               <CameraView />
+            </Route>
+            <Route path="/rakuten">
+              <RakutenAPI />
             </Route>
           </Switch>
         </Auth>

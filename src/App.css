@@ -59,10 +59,12 @@
 }
 #cloth-image {
   width: 100px;
+  height: 110px;
 }
 #cloth-detail-box {
   float: right;
-  margin-right: 30px;
+  width: 150px;
+  margin-right: 50px;
 }
 #cloth-name {
   font-size: 20px;

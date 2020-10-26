@@ -17,39 +17,13 @@ import Auth from "./Login/Auth";
 import HistorClothView from "./Cloth/HistoryClothView"
 import CameraView from "./Camera/CameraView";
 import NewUser from "./Login/NewUser";
+import Navbar from "./Layout/Navbar";
 
 function App() {
   return (
+    <>
+    <Navbar/>
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/new">新規登録</Link>
-            </li>
-            <li>
-              <Link to="/main">Main</Link>
-            </li>
-            <li>
-              <Link to="/add_cloth">服の追加</Link>
-            </li>
-            <li>
-              <Link to="/buy_cloth">服の購入</Link>
-            </li>
-            <li>
-              <Link to="/history_cloth">購入履歴</Link>
-            </li>
-            <li>
-              <Link to="/camera">AIコーデ判定</Link>
-            </li>
-          </ul>
-        </nav>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -81,8 +55,8 @@ function App() {
             </Route>
           </Switch>
         </Auth>
-      </div>
     </Router>
+    </>
   );
 }
 

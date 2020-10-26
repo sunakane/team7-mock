@@ -16,6 +16,7 @@ import BuyClothView from "./Cloth/BuyClothView";
 import Auth from "./Login/Auth";
 import HistorClothView from "./Cloth/HistoryClothView"
 import CameraView from "./Camera/CameraView";
+import NewUser from "./Login/NewUser";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </li>
             <li>
               <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/new">新規登録</Link>
             </li>
             <li>
               <Link to="/main">Main</Link>
@@ -53,8 +57,11 @@ function App() {
           <Route exact path="/login">
             <Login />
           </Route>
+          <Route exact path="/new">
+            <NewUser />
+          </Route>
         </Switch>
-        {/* Auth以下はログインしているときだけ表示されるようにした */}
+        {/* Auth以下はログインしているときだけ表示される */}
         <Auth>
           <Switch>
             <Route path="/main">

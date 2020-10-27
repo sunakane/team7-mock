@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Column from "./column/Column";
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,10 +20,14 @@ import CameraView from "./Camera/CameraView";
 import NewUser from "./Login/NewUser";
 import Navbar from "./Layout/Navbar";
 
+
 function App() {
   return (
     <>
     <Navbar/>
+    <li>
+      <Link to="/column">column</Link>
+    </li>
     <Router>
         <Switch>
           <Route exact path="/">

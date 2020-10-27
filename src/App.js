@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Column from "./column/Column";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,11 +19,17 @@ function App() {
           <li>
             <Link to="/">Home</Link>
           </li>
+          <li>
+            <Link to="/column">column</Link>
+          </li>
         </div>
       </div>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/column">
+           <Column/>
         </Route>
       </Switch>
     </Router>

@@ -36,3 +36,96 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*  画像投稿ページ  */
+#show-img {
+  width: 300px;
+}
+
+#MyImg {
+  display: none;
+  visibility: hidden;
+}
+
+/* 服購入ページ */
+#cloth-box {
+  padding: 0.5em 1em;
+  margin: 10px 10px 0 5px;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+}
+#cloth-image {
+  width: 100px;
+  height: 110px;
+}
+#cloth-detail-box {
+  float: right;
+  width: 150px;
+  margin-right: 50px;
+}
+#cloth-name {
+  font-size: 20px;
+}
+#cloth-price {
+  font-size: 18px;
+}
+#buy-btn {
+  margin-top: 7px;
+}
+#buy_animation {
+  margin-left: 21px;
+  font-size: 25px;
+  font-weight: bold;
+  color: darkorchid;
+}
+
+/* 購入履歴ページ */
+#buy-cloth-box {
+  padding: 0.5em 1em;
+  margin: 10px 10px 0 5px;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 3px #e06d0f;
+  border-radius: 10px;
+}
+
+
+/* カメラでコーディネートAI判定ページ */
+#camera {
+  margin: 10px 5px 0 20px;
+  border: solid 8px #6091d3;
+  border-radius: 10px;
+}
+#picture {
+  margin: 10px 5px 0 20px;
+  border: solid 8px #6091d3;
+  border-radius: 10px;
+}
+#btn-form{
+  text-align: center;
+}
+#shutter {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  background: #668ad8;
+  color: #FFF;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#kekka {
+  font-size: 25px;
+  font-weight: bold;
+}
+#score {
+  text-align: center;
+  font-size: 45px;
+  color: red;
+  font-weight: bold;
+}
+#recommend-cord {
+  font-size: 18px;
+}

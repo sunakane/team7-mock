@@ -24,12 +24,13 @@ const Example = (props) => {
   return (
     <Container>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/main">ファッションAI</NavbarBrand>
+        <NavbarBrand href="/main">コーディネートAPP</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/camera">コーデ判定</NavLink>
+              <NavLink href="/column">column</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>

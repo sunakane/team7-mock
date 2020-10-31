@@ -37,6 +37,22 @@
   }
 }
 
+/* Home画面 / */
+.home-back {
+  height: 100vh;
+  padding-top: 100px;
+}
+#home-title {
+  color: rgb(73, 32, 3);
+  font-family: 'SignPainter',sans-serif;
+  font-size: 68px;
+  font-weight: bold;
+  text-align: center;
+}
+#home-button {
+  margin-top: 50px;
+}
+
 
 /*  画像投稿ページ  */
 #show-img {

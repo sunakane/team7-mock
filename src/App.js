@@ -1,14 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Column from "./column/Column";
 import {
+  Button
+} from 'reactstrap';
+import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
+  Route
 } from "react-router-dom";
 
 import Login from "./Login/Login";
@@ -25,9 +24,6 @@ function App() {
   return (
     <>
     <Navbar/>
-    <li>
-      <Link to="/column">column</Link>
-    </li>
     <Router>
         <Switch>
           <Route exact path="/">
@@ -58,6 +54,9 @@ function App() {
             <Route path="/camera">
               <CameraView />
             </Route>
+            <Route path="/column">
+              <Column />
+            </Route>
           </Switch>
         </Auth>
     </Router>
@@ -66,7 +65,21 @@ function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <div class="home-back">
+      <div id="home-title">Cordinate App</div>
+
+      <div id="home-button">
+        <Button outline color="primary" href="/login" style={{marginLeft:'90px',marginRight:'20px'}}>
+              ログイン
+        </Button>{' '}
+
+        <Button outline color="primary" href="/new">
+              新規登録
+        </Button>{' '}
+      </div>
+    </div>
+  );
 }
 
 function Main() {

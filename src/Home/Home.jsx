@@ -21,11 +21,11 @@ class Home extends Component {
         <div id="home-content">CordinateAppはあなたに最適なコーディネートを提案します。</div>
 
         <div id="home-button">
-          <Button outline color="primary" href="/login" style={{marginLeft:'90px',marginRight:'20px'}}>
+          <Button color="primary" href="/login" style={{marginLeft:'90px',marginRight:'20px'}}>
                 ログイン
           </Button>{' '}
 
-          <Button outline color="primary" href="/new">
+          <Button color="primary" href="/new">
                 新規登録
           </Button>{' '}
         </div>

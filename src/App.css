@@ -39,19 +39,37 @@
 
 /* Home画面 / */
 .home-back {
+  background: #000;
+  background-image: url("/images/cloth_free.jpg");
+  background-size: cover;
   height: 100vh;
   padding-top: 100px;
 }
+.home-back::before{
+ content: ' ';
+ background-color: rgba(0,0,0,.5);
+ position: absolute;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+}
 #home-title {
-  color: rgb(73, 32, 3);
+  position: absolute;
+  height: 100px;
+  color: white;
   font-family: 'SignPainter',sans-serif;
-  font-size: 73px;
+  font-size: 83px;
   font-weight: bold;
   text-align: center;
+  z-index: 1;
 }
 #home-content {
-  margin: 10px 20px 0 20px;
-  font-size: 21px;
+  position: absolute;
+  margin: 120px 20px 0 20px;
+  height: 100px;
+  color: white;
+  font-size: 23px;
   font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
   animation-name: fade;
   animation-duration: 3s;
@@ -60,13 +78,17 @@
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards;
+  z-index: 1;
 }
 #home-content:nth-child(1) {
   -webkit-animation: example 0.5s ease 0.5s 1 forwards;
   animation: example 0.5s ease 0.5s 1 forwards;
 }
 #home-button {
-  margin-top: 50px;
+  height: 100px;
+  position: absolute;
+  margin-top: 230px;
+  z-index: 1;
 }
 @keyframes fade {
   0% {

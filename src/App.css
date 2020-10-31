@@ -45,12 +45,38 @@
 #home-title {
   color: rgb(73, 32, 3);
   font-family: 'SignPainter',sans-serif;
-  font-size: 68px;
+  font-size: 73px;
   font-weight: bold;
   text-align: center;
 }
+#home-content {
+  margin: 10px 20px 0 20px;
+  font-size: 21px;
+  font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+#home-content:nth-child(1) {
+  -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+  animation: example 0.5s ease 0.5s 1 forwards;
+}
 #home-button {
   margin-top: 50px;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 

@@ -1,8 +1,6 @@
 import { Cookies } from "react-cookie";
-import axios from "axios";
 import api from "./api/api";
 
-const endpoint = process.env.REACT_APP_API_ENDPOINT;
 class User {
   constructor() {
     this.cookies = new Cookies();

@@ -15,7 +15,7 @@ class HistoryCloth extends Component {
           <div id="cloth-name">{this.props.name}</div>
           <div id="cloth-price">{this.props.price}円</div>
         </div>
-        <img src={this.props.image} id="cloth-image" />
+        <img src={this.props.image} alt="" id="cloth-image" />
       </div>
     )
   }

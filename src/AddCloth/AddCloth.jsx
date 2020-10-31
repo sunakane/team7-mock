@@ -92,8 +92,8 @@ class AddCloth extends Component {
         </div>
 
         <input type="file" name="image" onChange={this.handleChangeFile} />
-        <img src={this.state.image} id="MyImg" />
-        <img src={this.state.image} id="show-img" />
+        <img src={this.state.image} alt="" id="MyImg" />
+        <img src={this.state.image} alt="" id="show-img" />
 
         <button onClick={this.handleToSubmitCloth} className="btn btn-primary">投稿する</button>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { Container, Form, FormGroup, Label, Input, Button} from "reactstrap";
 
 const NewUser = (props) => {

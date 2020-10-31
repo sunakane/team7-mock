@@ -16,7 +16,7 @@ class Home extends Component {
   
   render() {
     return (
-      <div class="home-back">
+      <div className="home-back">
         <div id="home-title">Cordinate App</div>
         <div id="home-content">CordinateAppはあなたに最適なコーディネートを提案します。</div>
 

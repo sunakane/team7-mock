@@ -28,6 +28,7 @@ const Login = (props) => {
 
   return (
     <Container>
+      <h3>ログイン</h3>
       <Form>
         {errMsg && <Alert color="danger">{errMsg}</Alert>}
         <FormGroup row>

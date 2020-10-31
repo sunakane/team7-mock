@@ -24,6 +24,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={NotLoginHome}/>
+          <Route exact path="/login" component={NotLoginHome}/>
+          <Route exact path="/new" component={NotLoginHome}/>
           <Route component={Default}/>
         </Switch>
       </Router>
@@ -34,7 +36,11 @@ function App() {
 // 未ログインユーザーがまずアクセスするページ
 function NotLoginHome() {
   return (
-    <Route exact path="/" component={Home} />
+    <>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/new" component={NewUser} />
+    </>
   );
 }
 
@@ -43,12 +49,6 @@ function Default() {
   return (
     <>
       <Navbar/>
-      <Route exact path="/login">
-        <Login />
-      </Route>
-      <Route exact path="/new">
-        <NewUser />
-      </Route>
       {/* Auth以下はログインしているときだけ表示される */}
       <Auth>
         <Switch>

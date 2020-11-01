@@ -42,12 +42,9 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <Button color="link" href="/login">
-            ログイン
+          <Button color="link" href="/logout">
+            ログアウト
           </Button>{" "}
-          <Button outline color="primary" href="/new">
-            新規登録
-          </Button>
         </Collapse>
       </Navbar>
     </Container>

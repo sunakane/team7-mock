@@ -3,7 +3,6 @@ import User from "../User.js";
 import {
   Button
 } from 'reactstrap';
-import { Redirect } from "react-router-dom";
 
 // 未ログインユーザーが一番はじめにアクセスするページ
 class Home extends Component {

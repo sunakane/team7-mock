@@ -71,18 +71,17 @@ class CameraView extends Component {
     // 判定結果を表示
     const kekka = document.getElementById("kekka");
     kekka.innerHTML = "あなたのコーディネートは.... <div id=\"score\">80点！</div>"
-    btn.remove();
+    //btn.remove();
 
     // おすすめコーディネートの紹介
     const recoCord = document.getElementById("recommend-cord");
-    // TODO
-    recoCord.innerHTML = "おすすめコーディネートはこちら";
+    recoCord.innerHTML = 'おすすめコーディネートは<a href="/column">こちら</a>';
   }
 
   render() {
     return (
       <div>
-        <h2>コーディネートAI判定</h2>
+        <div id="camera-title">コーディネートAI判定</div>
 
         <div id="btn-form">
           <button type="button" id="shutter" onClick={this.clickShutter}>判定！</button>

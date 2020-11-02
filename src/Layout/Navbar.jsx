@@ -29,7 +29,7 @@ const Example = (props) => {
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/camera">コーデ判定</NavLink>
-              <NavLink href="/column">column</NavLink>
+              <NavLink href="/column">コラム</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>

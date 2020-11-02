@@ -12,8 +12,16 @@ const NewUser = (props) => {
       <div id="new-title">新規登録</div>
       <Form id="new-form">
         <FormGroup>
-          <Label for="userId">ID</Label>
-          <Input type="text" name="userId" id="userId" placeholder="ID" autoComplete="off" />
+          <Label for="submit_id">ID</Label>
+          <Input type="text" name="submit_id" id="submit_id" placeholder="kono1997" autoComplete="off" />
+        </FormGroup>
+        <FormGroup>
+          <Label for="name">ニックネーム</Label>
+          <Input type="text" name="name" id="name" placeholder="こんす" autoComplete="off" />
+        </FormGroup>
+        <FormGroup>
+          <Label for="year">年齢</Label>
+          <Input type="text" name="year" id="year" placeholder="23" autoComplete="off" />
         </FormGroup>
         <FormGroup>
           <Label for="password">パスワード</Label>
@@ -21,7 +29,6 @@ const NewUser = (props) => {
             type="password"
             name="password"
             id="password"
-            placeholder="Password"
           />
         </FormGroup>
         <FormGroup>

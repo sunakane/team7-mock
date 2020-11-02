@@ -103,11 +103,42 @@
 }
 
 
+/* ログイン画面 */
+#login-title {
+  position: absolute;
+  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 100px;
+  color: white;
+  z-index: 1;
+}
+#login-form {
+  position: absolute;
+  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 100px 0 0 50px;
+  color: white;
+  z-index: 1; 
+}
+#login-button {
+  margin: 50px 0 0 100px;
+  color: white;
+  z-index: 1; 
+}
+#login-back {
+  margin: 20px 0 0 95px;
+  color: white;
+  font-size: 15px;
+  z-index: 1; 
+}
+
+
 /*  画像投稿ページ  */
 #show-img {
   width: 300px;
 }
-
 #MyImg {
   display: none;
   visibility: hidden;

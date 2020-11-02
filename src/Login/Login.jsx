@@ -40,7 +40,7 @@ const Login = (props) => {
             type="text"
             name="userId"
             id="userId"
-            placeholder="ID"
+            placeholder="konos1997"
             onChange={(e) => {
               setUserId(e.target.value);
             }}
@@ -54,7 +54,6 @@ const Login = (props) => {
             type="password"
             name="password"
             id="loginPassword"
-            placeholder="パスワード"
             onChange={(e) => {
               setPassWord(e.target.value);
             }}

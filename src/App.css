@@ -113,6 +113,7 @@
   visibility: hidden;
 }
 
+
 /* 服購入ページ */
 #shop-title {
   text-align: center;
@@ -172,7 +173,7 @@
   margin-left: 21px;
   font-size: 25px;
   font-weight: bold;
-  color: #2EE59D;
+  color: #03c97a;
 }
 
 /* 購入履歴ページ */

@@ -70,7 +70,7 @@ class CameraView extends Component {
 
     // 判定結果を表示
     const kekka = document.getElementById("kekka");
-    kekka.innerHTML = "あなたのコーディネートは.... <div id=\"score\">80点！</div>"
+    kekka.innerHTML = 'あなたのコーディネートは.... <div id="score">&#092; 80点 &#047;</div>';
     //btn.remove();
 
     // おすすめコーディネートの紹介

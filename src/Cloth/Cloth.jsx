@@ -26,9 +26,12 @@ class Cloth extends Component {
     const button = document.getElementById(id);
     button.disabled = true;
     button.innerHTML = "購入済み";
-    
+    button.style.fontWeight = "bold";
 
-    axios.post('http://localhost:8000/api/v1/buy', {
+    const audio = new Audio("se/kira1.mp3")
+    audio.play()
+    
+    /* axios.post('http://localhost:8000/api/v1/buy', {
       "clothID": this.props.id
     }, {withCredentials: true})
     .then((response) => {
@@ -36,7 +39,7 @@ class Cloth extends Component {
     })
     .catch(() => {
         console.log("post fail");
-    });
+    }); */
   }
 
   

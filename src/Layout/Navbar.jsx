@@ -21,7 +21,7 @@ const Example = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Container>
+    <container-fluid>
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/main">コーディネートAPP</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -36,7 +36,6 @@ const Example = (props) => {
                 コーデ作成
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="/add_cloth">服の追加</DropdownItem>
                 <DropdownItem href="/buy_cloth">服の購入</DropdownItem>
                 <DropdownItem href="/buy_cloth">購入履歴</DropdownItem>
               </DropdownMenu>
@@ -47,7 +46,7 @@ const Example = (props) => {
           </Button>{" "}
         </Collapse>
       </Navbar>
-    </Container>
+    </container-fluid>
   );
 };
 

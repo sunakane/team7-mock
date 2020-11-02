@@ -12,7 +12,7 @@ class Cloth extends Component {
   componentDidMount(){
   }
 
-  handleToBuy = () => {
+  handleToBuy(id) {
     // 購入完了アニメーション
     const element =  document.querySelector('#buy_animation');
     element.innerHTML = "購入ありがとうございます&#x1f604";
@@ -23,9 +23,10 @@ class Cloth extends Component {
     });
 
     // 「購入ボタン」を押せなくする
-    const button = document.getElementById("buy-btn");
+    const button = document.getElementById(id);
     button.disabled = true;
     button.innerHTML = "購入済み";
+    
 
     axios.post('http://localhost:8000/api/v1/buy', {
       "clothID": this.props.id
@@ -46,8 +47,8 @@ class Cloth extends Component {
           <div id="cloth-name">{this.props.name}</div>
           <div id="cloth-price">{this.props.price}円</div>
         </div>
-        <img src={this.props.image} alt="" d="cloth-image" />
-        <button onClick={this.handleToBuy} className="btn btn-primary" id="buy-btn">購入する</button>
+        <img src={this.props.image} alt="" id="cloth-image" />
+        <button onClick={() => this.handleToBuy(this.props.id)} class="buy-btn" id={this.props.id}>購入する</button>
       </div>
     )
   }

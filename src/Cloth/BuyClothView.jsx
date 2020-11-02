@@ -30,7 +30,7 @@ class BuyClothView extends Component {
   render() {
     return (
       <div>
-        <h2>ショッピング</h2>
+        <div id="shop-title">ショッピング</div>
         <div id="buy_animation"></div>
         <ClothList
           clothes={this.state.clothes}

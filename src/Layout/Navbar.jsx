@@ -11,9 +11,10 @@ import {
   DropdownItem,
   Button
 } from 'reactstrap';
+import { withRouter } from "react-router-dom";
 import User from "../User.js";
 
-const Example = (props) => {
+const Bar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -63,4 +64,4 @@ const Example = (props) => {
   );
 };
 
-export default Example;
+export default withRouter(Bar);

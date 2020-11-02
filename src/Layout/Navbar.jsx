@@ -51,7 +51,7 @@ const Bar = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem href="/buy_cloth">服の購入</DropdownItem>
-                <DropdownItem href="/buy_cloth">購入履歴</DropdownItem>
+                <DropdownItem href="/history_cloth">購入履歴</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>

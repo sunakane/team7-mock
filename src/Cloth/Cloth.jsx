@@ -50,7 +50,7 @@ class Cloth extends Component {
           <div id="cloth-price">{this.props.price}円</div>
         </div>
         <img src={this.props.image} alt="" id="cloth-image" />
-        <button onClick={() => this.handleToBuy(this.props.id)} class="buy-btn" id={this.props.id}>購入する</button>
+        <button onClick={() => this.handleToBuy(this.props.id)} className="buy-btn" id={this.props.id}>購入する</button>
       </div>
     )
   }

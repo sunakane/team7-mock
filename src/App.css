@@ -135,6 +135,38 @@
 }
 
 
+/* 新規登録 */
+#new-title {
+  position: absolute;
+  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 120px;
+  color: white;
+  z-index: 1;
+}
+#new-form {
+  position: absolute;
+  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 80px 0 0 80px;
+  color: white;
+  z-index: 1; 
+}
+#new-button {
+  margin: 50px 0 0 70px;
+  color: white;
+  z-index: 1; 
+}
+#top-back {
+  margin: 20px 0 0 55px;
+  color: white;
+  font-size: 18px;
+  z-index: 1; 
+}
+
+
 /*  画像投稿ページ  */
 #show-img {
   width: 300px;

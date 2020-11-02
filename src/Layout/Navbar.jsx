@@ -23,17 +23,23 @@ const Example = (props) => {
   return (
     <container-fluid>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/main">コーディネートAPP</NavbarBrand>
+        <NavbarBrand href="/main">Cordinate App</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/camera">コーデ判定</NavLink>
-              <NavLink href="/column">コラム</NavLink>
-            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                コーデ作成
+                コーディネート
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem href="/cordinate">コーディネート作成</DropdownItem>
+                <DropdownItem href="/camera">コーデ判定</DropdownItem>
+                <DropdownItem href="/column">コラム</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                ショッピング
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem href="/buy_cloth">服の購入</DropdownItem>

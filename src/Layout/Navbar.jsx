@@ -5,20 +5,27 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Container,
   Button
 } from 'reactstrap';
+import User from "../User.js";
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+  async function onLogoutClicked() {
+    try {
+      await User.logout();
+      props.history.push({ pathname: "/" });
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
   return (
     <container-fluid>
@@ -47,7 +54,7 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <Button color="link" href="/logout">
+          <Button color="link" onClick={onLogoutClicked}>
             ログアウト
           </Button>{" "}
         </Collapse>

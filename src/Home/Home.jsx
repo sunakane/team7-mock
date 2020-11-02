@@ -13,11 +13,7 @@ class Home extends Component {
   }
 
   renderRedirect = () => {
-    var redirect_url = "http://localhost:3000/main";
-    if (document.referrer) {
-      var referrer = "referrer=" + encodeURIComponent(document.referrer);
-      // redirect_url = redirect_url + ("/main" ? '&' : '?') + referrer;
-    }
+    const redirect_url = "http://localhost:3000/main";
     window.location.href = redirect_url;
   };
 

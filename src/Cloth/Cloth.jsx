@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from 'axios';
 
 // 服単体コンポーネント
 class Cloth extends Component {

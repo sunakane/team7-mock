@@ -42,7 +42,7 @@ class CameraView extends Component {
   clickShutter = () => {
     const title = document.querySelector("#camera-title");
     const video  = document.querySelector("#camera");
-    // const btn = document.querySelector("#shutter");
+    const btn = document.querySelector("#shutter");
     const canvas = document.querySelector("#picture");
     const ctx = canvas.getContext("2d");
     const shareTitle = document.querySelector("#share-title");
@@ -73,6 +73,8 @@ class CameraView extends Component {
 
     video.srcObject = null;
     video.remove();
+
+    btn.innerHTML = "判定結果";
 
     // 判定結果を表示
     const kekka = document.getElementById("kekka");

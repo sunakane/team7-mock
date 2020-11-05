@@ -16,6 +16,7 @@ import CameraView from "./Camera/CameraView";
 import NewUser from "./Login/NewUser";
 import Navbar from "./Layout/Navbar";
 import Home from "./Home/Home";
+import Main from "./Main/Main";
 
 
 function App() {
@@ -74,11 +75,6 @@ function Default() {
       </Auth>
     </>
   );
-}
-
-
-function Main() {
-  return <h2>Main</h2>;
 }
 
 export default App;

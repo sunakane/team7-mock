@@ -40,25 +40,25 @@
 /* Home画面 / */
 .home-back {
   background: #000;
-  background-image: url("/images/cloth_free.jpg");
+  background-image: url('/images/cloth_free.jpg');
   background-size: cover;
   height: 100vh;
   padding-top: 100px;
 }
-.home-back::before{
- content: ' ';
- background-color: rgba(0,0,0,.5);
- position: absolute;
- top: 0;
- right: 0;
- bottom: 0;
- left: 0;
+.home-back::before {
+  content: ' ';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 #home-title {
   position: absolute;
   height: 100px;
   color: white;
-  font-family: 'SignPainter',sans-serif;
+  font-family: 'SignPainter', sans-serif;
   font-size: 83px;
   font-weight: bold;
   text-align: center;
@@ -70,7 +70,8 @@
   height: 100px;
   color: white;
   font-size: 23px;
-  font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+  font-family: 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体',
+    sans-serif;
   animation-name: fade;
   animation-duration: 4s;
   animation-timing-function: ease-out;
@@ -97,11 +98,10 @@
   }
 }
 
-
 /* ログイン画面 */
 #login-title {
   position: absolute;
-  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
   font-size: 35px;
   font-weight: bold;
   margin-left: 100px;
@@ -110,30 +110,29 @@
 }
 #login-form {
   position: absolute;
-  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
   font-size: 20px;
   font-weight: bold;
   margin: 100px 0 0 50px;
   color: white;
-  z-index: 1; 
+  z-index: 1;
 }
 #login-button {
   margin: 50px 0 0 100px;
   color: white;
-  z-index: 1; 
+  z-index: 1;
 }
 #login-back {
   margin: 20px 0 0 95px;
   color: white;
   font-size: 15px;
-  z-index: 1; 
+  z-index: 1;
 }
-
 
 /* 新規登録 */
 #new-title {
   position: absolute;
-  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
   font-size: 35px;
   font-weight: bold;
   margin-left: 120px;
@@ -142,25 +141,83 @@
 }
 #new-form {
   position: absolute;
-  font-family: 'TsukuBRdGothic-Regular',sans-serif;
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
   font-size: 20px;
   font-weight: bold;
   margin: 80px 0 0 80px;
   color: white;
-  z-index: 1; 
+  z-index: 1;
 }
 #new-button {
   margin: 50px 0 0 70px;
   color: white;
-  z-index: 1; 
+  z-index: 1;
 }
 #top-back {
   margin: 20px 0 0 55px;
   color: white;
   font-size: 18px;
-  z-index: 1; 
+  z-index: 1;
 }
 
+/* mainページ */
+#main-trend-title-top {
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+#main-trend-items {
+  margin: 10px 10px 20px 15px;
+  display: grid;
+  grid-template-rows: 300px;
+  grid-template-columns: 170px 170px;
+  gap: 10px;
+}
+#main-trend-item {
+  padding: 10px 15px 10px 15px;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+}
+#main-trend-image {
+  width: 140px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+#main-trend-content {
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+}
+#main-shop-title-top {
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+#main-shop-items {
+  margin: 10px 10px 20px 15px;
+  display: grid;
+  grid-template-rows: 300px;
+  grid-template-columns: 170px 170px;
+  gap: 10px;
+}
+#main-shop-item {
+  padding: 10px 15px 10px 15px;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+}
+#main-shop-title {
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+#main-shop-image {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 15px;
+}
+#main-shop-price {
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+  font-size: 24px;
+}
 
 /*  画像投稿ページ  */
 #show-img {
@@ -170,7 +227,6 @@
   display: none;
   visibility: hidden;
 }
-
 
 /* 服購入ページ */
 #shop-title {
@@ -184,7 +240,7 @@
   padding: 0.5em 1em;
   margin: 10px 10px 0 5px;
   font-weight: bold;
-  background: #FFF;
+  background: #fff;
   border: solid 3px #6091d3;
   border-radius: 10px;
 }
@@ -222,7 +278,7 @@
   outline: none;
 }
 .buy-btn:hover {
-  background-color: #2EE59D;
+  background-color: #2ee59d;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);
@@ -239,11 +295,10 @@
   padding: 0.5em 1em;
   margin: 10px 10px 0 5px;
   font-weight: bold;
-  background: #FFF;
+  background: #fff;
   border: solid 3px #e06d0f;
   border-radius: 10px;
 }
-
 
 /* カメラでコーディネートAI判定ページ */
 #camera-title {
@@ -263,7 +318,7 @@
   border: solid 8px rgba(46, 177, 229, 0.7);
   border-radius: 10px;
 }
-#btn-form{
+#btn-form {
   text-align: center;
 }
 #shutter {

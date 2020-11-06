@@ -16,33 +16,31 @@ class Main extends Component {
       <div className="main">
 
         <div className="main-trend">
-          <div className="main-trend-title">トレンド</div>
+          <div id="main-trend-title-top">トレンドコーデ</div>
           <div id="main-trend-items">
             <div id="main-trend-item">
-              <div id="main-trend-title">トレンド1</div>
-              <div id="main-trend-image"></div>
-              <div id="main-trend-content"></div>
+              <img src="https://mensfashion.itembox.design/product/632/000000163224/000000163224-01-xl.jpg" id="main-trend-image" alt="" />
+              <div id="main-trend-content">今年の秋冬はxxxがオススメ！</div>
             </div>
             <div id="main-trend-item">
-              <div id="main-trend-title">トレンド2</div>
-              <div id="main-trend-image"></div>
-              <div id="main-trend-content"></div>
+              <img src="https://mensfashion.itembox.design/product/024/000000002490/000000002490-01-l.jpg" id="main-trend-image" alt="" />
+              <div id="main-trend-content">oooと△△△を組み合わせたコーデが今人気！</div>
             </div>
           </div>
         </div>
 
         <div className="main-shop">
-          <div className="main-shop-title">新着アイテム</div>
+          <div id="main-shop-title-top">新着アイテム</div>
           <div id="main-shop-items">
             <div id="main-shop-item">
-              <div id="main-shop-title">ショップ1</div>
-              <div id="main-shop-image"></div>
-              <div id="main-shop-content"></div>
+              <div id="main-shop-title">スイカTシャツ</div>
+              <img src="images/suika-t.png" id="main-shop-image" alt="" />
+              <div id="main-shop-price">￥3,000</div>
             </div>
             <div id="main-shop-item">
-              <div id="main-shop-title">ショップ2</div>
-              <div id="main-shop-image"></div>
-              <div id="main-shop-content"></div>
+              <div id="main-shop-title">パーカー</div>
+              <img src="images/parker.png" id="main-shop-image" alt="" />
+              <div id="main-shop-price">￥5,000</div>
             </div>
           </div>
         </div>

@@ -27,6 +27,7 @@ class Main extends Component {
               <div id="main-trend-content">oooと△△△を組み合わせたコーデが今人気！</div>
             </div>
           </div>
+          <div id="more"><a href="/">more !</a></div>
         </div>
 
         <div className="main-shop">
@@ -43,6 +44,7 @@ class Main extends Component {
               <div id="main-shop-price">￥5,000</div>
             </div>
           </div>
+          <div id="more"><a href="/">more !</a></div>
         </div>
       </div>
     )

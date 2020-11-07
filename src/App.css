@@ -167,7 +167,7 @@
   font-weight: bold;
 }
 #main-trend-items {
-  margin: 10px 10px 20px 15px;
+  margin: 10px 10px 10px 15px;
   display: grid;
   grid-template-rows: 300px;
   grid-template-columns: 170px 170px;
@@ -186,13 +186,16 @@
 #main-trend-content {
   font-family: 'TsukuBRdGothic-Regular', sans-serif;
 }
+#more {
+  margin-left: 300px;
+}
 #main-shop-title-top {
   font-family: 'TsukuBRdGothic-Regular', sans-serif;
   font-size: 30px;
   font-weight: bold;
 }
 #main-shop-items {
-  margin: 10px 10px 20px 15px;
+  margin: 10px 10px 0px 15px;
   display: grid;
   grid-template-rows: 300px;
   grid-template-columns: 170px 170px;

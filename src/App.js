@@ -17,6 +17,8 @@ import NewUser from "./Login/NewUser";
 import Navbar from "./Layout/Navbar";
 import Home from "./Home/Home";
 import Main from "./Main/Main";
+import HighCorde from "./HighCorde/HighCordeView"
+import AiHighCorde from "./AiHighCorde/AiHighCorde"
 
 
 function App() {
@@ -70,6 +72,12 @@ function Default() {
           </Route>
           <Route path="/column">
             <Column />
+          </Route>
+          <Route path="/high_corde">
+            <HighCorde />
+          </Route>
+          <Route path="/ai_high_corde">
+            <AiHighCorde />
           </Route>
         </Switch>
       </Auth>

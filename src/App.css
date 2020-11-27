@@ -280,6 +280,24 @@
   cursor: pointer;
   outline: none;
 }
+.buy-btn-cord {
+  width: 180px;
+  height: 40px;
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
 .buy-btn:hover {
   background-color: #2ee59d;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
@@ -291,6 +309,22 @@
   font-size: 25px;
   font-weight: bold;
   color: #03c97a;
+}
+
+/* 点数が高いコーデ一覧ページ */
+#high-cord-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+  color: #e06d0f;
+}
+#corde-score {
+  font-size: 30px;
+  margin-left: 30px;
+  font-weight: bold;
+  font-family: 'TsukuBRdGothic-Regular', sans-serif;
+  color: red;
 }
 
 /* 購入履歴ページ */
@@ -380,4 +414,11 @@
   width: 53px;
   height: 53px;
   display: none;
+}
+
+/* AI判定後の高いコーデ一覧 */
+#ai-corde-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }

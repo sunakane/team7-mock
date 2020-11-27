@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 // 服単体コンポーネント
 class Cloth extends Component {
@@ -51,6 +52,9 @@ class Cloth extends Component {
         </div>
         <img src={this.props.image} alt="" id="cloth-image" />
         <button onClick={() => this.handleToBuy(this.props.id)} className="buy-btn" id={this.props.id}>購入する</button>
+        <Link to="/high_corde">
+          <button className="buy-btn-cord">これを使ったコーデ</button>
+        </Link>
       </div>
     )
   }

@@ -83,7 +83,7 @@ class CameraView extends Component {
 
     // おすすめコーディネートの紹介
     const recoCord = document.getElementById("recommend-cord");
-    recoCord.innerHTML = 'おすすめコーディネートは<a href="/column">こちら</a>';
+    recoCord.innerHTML = 'おすすめコーディネートは<a href="/ai_high_corde">こちら</a>';
   }
 
   clickShare = () => {

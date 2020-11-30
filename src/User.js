@@ -1,8 +1,6 @@
 import { Cookies } from "react-cookie";
-import axios from "axios";
 import api from "./api/api";
 
-const endpoint = process.env.REACT_APP_API_ENDPOINT;
 class User {
   constructor() {
     this.cookies = new Cookies();
@@ -20,6 +18,8 @@ class User {
   // webストレージにkey: valueで登録
   // set = (key, value) => localStorage.setItem(key, value);
   set = (key, value) => this.cookies.set(key, value);
+
+  remove = (key) => this.cookies.remove(key)
 
   // get = (key) => this.getLocalStorage(key);
   get = (key) => this.getCookies(key);
@@ -49,8 +49,15 @@ class User {
   };
 
   logout = async () => {
-    if (this.isLoggedIn()) {
-      this.set("isLoggedIn", false);
+    // ログアウト処理
+    try {
+      const res = await api.get("/logout", {withCredentials: true});
+      console.log(res.data);
+      this.remove("isLoggedIn");
+      return true;
+    } catch (e) {
+      const { status, statusText } = e.response;
+      console.error(`Error! HTTP Status:${status} ${statusText}`);
     }
   };
 }

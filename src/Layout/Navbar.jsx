@@ -5,53 +5,63 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
-  Container,
   Button
 } from 'reactstrap';
+import { withRouter } from "react-router-dom";
+import User from "../User.js";
 
-const Example = (props) => {
+const Bar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
+  async function onLogoutClicked() {
+    try {
+      await User.logout();
+      props.history.push({ pathname: "/" });
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   return (
-    <Container>
+    <container-fluid>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/main">ファッションAI</NavbarBrand>
+        <NavbarBrand href="/main">Cordinate App</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/camera">コーデ判定</NavLink>
-            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                コーデ作成
+                コーディネート
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="/add_cloth">服の追加</DropdownItem>
+                <DropdownItem href="/cordinate">コーディネート作成</DropdownItem>
+                <DropdownItem href="/camera">コーデ判定</DropdownItem>
+                <DropdownItem href="/column">コラム</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                ショッピング
+              </DropdownToggle>
+              <DropdownMenu right>
                 <DropdownItem href="/buy_cloth">服の購入</DropdownItem>
-                <DropdownItem href="/buy_cloth">購入履歴</DropdownItem>
+                <DropdownItem href="/history_cloth">購入履歴</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <Button color="link" href="/login">
-            ログイン
+          <Button color="link" onClick={onLogoutClicked}>
+            ログアウト
           </Button>{" "}
-          <Button outline color="primary" href="/new">
-            新規登録
-          </Button>
         </Collapse>
       </Navbar>
-    </Container>
+    </container-fluid>
   );
 };
 
-export default Example;
+export default withRouter(Bar);

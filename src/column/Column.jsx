@@ -36,11 +36,11 @@ class ColumnCard extends React.Component {
         </div>
       );
   }
-  handleClick() {
-    // ***** tenkiの値の書き換え *****
-    this.setState({detail:"今年は黒のコート"});
 
+  handleClick() {
+    this.setState({detail:"今年は黒のコート"});
   }
+
   constructor(props) {
       super(props);
       this.state = { detail : "‥‥" };
@@ -49,12 +49,9 @@ class ColumnCard extends React.Component {
 };
 
 function Column() {
-  // return   <div>test</div>;
   return (
     <ColumnCard />
   );
 }
 
-
-// export default Example;
 export default Column;

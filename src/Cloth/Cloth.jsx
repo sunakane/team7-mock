@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 // 服単体コンポーネント
 class Cloth extends Component {
@@ -12,7 +12,7 @@ class Cloth extends Component {
   componentDidMount(){
   }
 
-  handleToBuy = () => {
+  handleToBuy(id) {
     // 購入完了アニメーション
     const element =  document.querySelector('#buy_animation');
     element.innerHTML = "購入ありがとうございます&#x1f604";
@@ -23,11 +23,15 @@ class Cloth extends Component {
     });
 
     // 「購入ボタン」を押せなくする
-    const button = document.getElementById("buy-btn");
+    const button = document.getElementById(id);
     button.disabled = true;
     button.innerHTML = "購入済み";
+    button.style.fontWeight = "bold";
 
-    axios.post('http://localhost:8000/api/v1/buy', {
+    const audio = new Audio("se/kira1.mp3")
+    audio.play()
+    
+    /* axios.post('http://localhost:8000/api/v1/buy', {
       "clothID": this.props.id
     }, {withCredentials: true})
     .then((response) => {
@@ -35,7 +39,7 @@ class Cloth extends Component {
     })
     .catch(() => {
         console.log("post fail");
-    });
+    }); */
   }
 
   
@@ -46,8 +50,11 @@ class Cloth extends Component {
           <div id="cloth-name">{this.props.name}</div>
           <div id="cloth-price">{this.props.price}円</div>
         </div>
-        <img src={this.props.image} id="cloth-image" />
-        <button onClick={this.handleToBuy} className="btn btn-primary" id="buy-btn">購入する</button>
+        <img src={this.props.image} alt="" id="cloth-image" />
+        <button onClick={() => this.handleToBuy(this.props.id)} className="buy-btn" id={this.props.id}>購入する</button>
+        <Link to="/high_corde">
+          <button className="buy-btn-cord">これを使ったコーデ</button>
+        </Link>
       </div>
     )
   }

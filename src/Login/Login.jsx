@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Container,
   Form,
   FormGroup,
   Input,
@@ -26,9 +25,14 @@ const Login = (props) => {
     }
   }
 
+  async function clickTopPage() {
+    props.history.push({ pathname: "/" });
+  }
+
   return (
-    <Container>
-      <Form>
+    <div className="home-back">
+      <div id="login-title">ログイン</div>
+      <Form id="login-form">
         {errMsg && <Alert color="danger">{errMsg}</Alert>}
         <FormGroup row>
           <Label for="userId">ID</Label>
@@ -36,11 +40,12 @@ const Login = (props) => {
             type="text"
             name="userId"
             id="userId"
-            placeholder="ID"
+            placeholder="konos1997"
             onChange={(e) => {
               setUserId(e.target.value);
             }}
             value={userId}
+            autoComplete="off"
           />
         </FormGroup>
         <FormGroup row>
@@ -49,18 +54,22 @@ const Login = (props) => {
             type="password"
             name="password"
             id="loginPassword"
-            placeholder="パスワード"
             onChange={(e) => {
               setPassWord(e.target.value);
             }}
             value={password}
           />
         </FormGroup>
-        <Button color="primary" onClick={onLoginClicked}>
-          ログイン
-        </Button>
+
+        <div id="login-button">
+          <Button color="primary" onClick={onLoginClicked}>
+            ログイン
+          </Button>
+        </div>
+
+        <div id="login-back" onClick={clickTopPage}>トップページへ</div>
       </Form>
-    </Container>
+    </div>
   );
 };
 
